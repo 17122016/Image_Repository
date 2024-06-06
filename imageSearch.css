@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  color: black;
+}
+h1 {
+  text-align: center;
+  margin: 100px auto 50px;
+  font-weight: 600;
+}
+
+form {
+  width: 98%;
+  max-width: 400px;
+  margin: auto;
+  height: 75px;
+  background: #434989;
+  color: #fff; /* Ensure text color is white */
+  display: flex;
+  align-items: center;
+  border-radius: 90px;
+  padding: 0 0px;
+}
+
+form input {
+  flex: 1;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+  padding: 0 30px;
+}
+
+/* Styles for autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #434989 inset !important;
+  -webkit-text-fill-color: #fff;
+  transition: background-color 5000s ease-in-out 0s;
+  border-radius: 100px;
+  color: #fff; /* Ensure text color is white */
+  caret-color: #fff !important; /* Ensure caret color is white */
+}
+
+form button {
+  padding: 0 20px;
+  height: 100%;
+  background: #ff3929;
+  color: #fff;
+  font-size: 18px;
+  border: 0;
+  outline: 0;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: white;
+  font-size: 18px;
+}
+#show-more-btn {
+  background: #ff3929;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin: 10px auto 100px;
+  cursor: pointer;
+  display: none;
+}
+#search-result {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid without media queries */
+  grid-gap: 30px; /* Adjusted grid gap for better spacing */
+}
+#search-result img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 5px;
+}
